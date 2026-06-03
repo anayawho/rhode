@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Want a Rhode Gift Card?</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+margin: 0;
+font-family: 'Montserrat', sans-serif;
+background: linear-gradient(to bottom, #FFFFFF, #FDFDFD);
+overflow-x: hidden;
+color: #1A1A1A;
+position: relative;
+letter-spacing: -0.01em;
+}
+
+/* Custom Rhode Palette Utilities */
+.bg-rhode-cream { background-color: #F4F1EC; }
+.bg-rhode-gray { background-color: #8E8C89; }
+.text-rhode-gray { color: #8E8C89; }
+.border-rhode-soft { border-color: #EAE6DF; }
+
+/* Banner */
+.urgency-pulse {
+animation: pulseUrgency 2s infinite ease-in-out;
+font-size: 0.95rem;
+background: #8E8C89;
+color: #FFFFFF;
+padding: 0.6rem 0;
+text-align: center;
+font-weight: 400;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+}
+@keyframes pulseUrgency { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
+
+/* Hero */
+.hero-headline {
+font-family: 'Playfair Display', serif;
+font-weight: 400;
+color: #1A1A1A;
+letter-spacing: -0.02em;
+}
+.hero-headline span {
+font-style: italic;
+color: #8E8C89;
+}
+
+/* Steps & Cards */
+.step-box {
+background: #FFFFFF;
+color: #1A1A1A;
+border-radius: 1.25rem;
+padding: 2rem 1.5rem;
+box-shadow: 0 10px 30px rgba(142, 140, 137, 0.06);
+text-align: center;
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+position: relative;
+overflow: hidden;
+border: 1px solid #EAE6DF;
+}
+.step-box:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 40px rgba(142, 140, 137, 0.12);
+}
+.step-box p { font-size: 0.95rem; color: #4A4A4A; }
+
+/* Instruction Badge */
+.instructions-text {
+font-size: 0.9rem;
+font-weight: 600;
+margin-bottom: 2rem;
+display: inline-block;
+padding: 0.6rem 2rem;
+border-radius: 2rem;
+background: #F4F1EC;
+color: #8E8C89;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+border: 1px solid #EAE6DF;
+}
+
+/* Button */
+.click-button {
+background: #8E8C89;
+color: #FFFFFF;
+font-weight: 600;
+box-shadow: 0 4px 24px rgba(142, 140, 137, 0.25);
+font-size: 1.1rem;
+padding: 1.1rem 4rem;
+border-radius: 2rem;
+letter-spacing: 0.05em;
+text-transform: lowercase;
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.2s ease;
+}
+.click-button:hover {
+background-color: #797775;
+transform: scale(1.03);
+box-shadow: 0 6px 30px rgba(142, 140, 137, 0.35);
+}
+
+.card {
+border-radius: 1.25rem;
+padding: 2rem;
+box-shadow: 0 8px 24px rgba(142, 140, 137, 0.05);
+transition: transform 0.3s ease;
+background: #FFFFFF;
+color: #1A1A1A;
+border: 1px solid #EAE6DF;
+}
+
+/* Floating Fluid Elements */
+#bubbles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.bubble {
+position: absolute;
+border-radius: 50%;
+background: rgba(142, 140, 137, 0.06);
+opacity: 0.4;
+animation: floatBubble linear infinite;
+}
+@keyframes floatBubble {
+0% { transform: translateY(0px) scale(0.6); opacity: 0.3; }
+50% { opacity: 0.5; }
+100% { transform: translateY(115vh) scale(1.1); opacity: 0.1; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="bubbles"></div>
+
+<!-- Custom Request Top Banner -->
+<div class="urgency-pulse">Summer Collection 2026 :</div>
+
+<section class="relative py-20 px-4 text-center z-10">
+ <div class="max-w-4xl mx-auto">
+ <h1 class="text-4xl md:text-6xl mb-6 hero-headline text-center">
+ want a <span>rhode</span> gift card?
+ </h1>
+ <p class="instructions-text">Complete these steps to claim your allocation</p>
+ </div>
+
+ <!-- Main Multi-Step Flow Container -->
+ <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto text-left">
+ <div class="step-box">
+ <div class="text-xs font-bold text-rhode-gray uppercase tracking-widest mb-2">step 01</div>
+ <p class="font-semibold text-lg text-black mb-2 lowercase">click open</p>
+ <p>Select the "claim now" portal routing below to launch your personal verification track.</p>
+ </div>
+
+ <div class="step-box">
+ <div class="text-xs font-bold text-rhode-gray uppercase tracking-widest mb-2">step 02</div>
+ <p class="font-semibold text-lg text-black mb-2 lowercase">profile setup</p>
+ <p>Provide your fundamental shipping destination email and base contact indicators.</p>
+ </div>
+
+ <div class="step-box">
+ <div class="text-xs font-bold text-rhode-gray uppercase tracking-widest mb-2">step 03</div>
+ <p class="font-semibold text-lg text-black mb-2 lowercase">brand matching</p>
+ <p>Fulfill 4 to 5 casual sponsored ecosystem steps (mobile application samples or features).</p>
+ </div>
+
+ <div class="step-box">
+ <div class="text-xs font-bold text-rhode-gray uppercase tracking-widest mb-2">step 04</div>
+ <p class="font-semibold text-lg text-black mb-2 lowercase">receive glaze</p>
+ <p>Enjoy your digital Rhode luxury credit directly inside your validated inbox.</p>
+ </div>
+ </div>
+
+ <div class="mt-8 mb-20">
+ <a href="https://trksy.org/aff_c?offer_id=1177&aff_id=64120" class="inline-block click-button">claim now</a>
+ </div>
+
+ <!-- Real-Time Activity Leaderboard Block -->
+ <div class="max-w-2xl mx-auto card p-8 mb-16 text-left">
+ <div class="flex items-center justify-between border-b border-rhode-soft pb-4 mb-4">
+ <h3 class="font-semibold tracking-wide text-sm uppercase text-rhode-gray">Live Allocation Tracker</h3>
+ <span class="flex h-2 w-2 relative">
+ <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-stone-400 opacity-75"></span>
+ <span class="relative inline-flex rounded-full h-2 w-2 bg-stone-500"></span>
+ </span>
+ </div>
+ <div class="space-y-3" id="leaderboardContainer">
+ <!-- Generated rows load here dynamically -->
+ </div>
+ </div>
+
+ <!-- Dynamic Reward Estimator Matrix -->
+ <div class="card max-w-2xl mx-auto p-8 text-left mb-20">
+ <h3 class="font-semibold tracking-wide text-sm uppercase text-rhode-gray mb-6">Glaze Estimator Tool</h3>
+ <label class="block font-medium mb-2 text-sm text-neutral-600">Sponsored brand selections to process (4-70):</label>
+ <div class="flex flex-col sm:flex-row gap-4 mb-4">
+ <input type="number" id="stepsInput" min="4" max="70" class="flex-1 p-3 rounded-xl text-black border border-rhode-soft focus:outline-none focus:border-rhode-gray bg-rhode-cream bg-opacity-30 text-sm" placeholder="Minimum entry of 4 modules required">
+ <button onclick="calculateReward()" class="click-button px-8 py-3 text-sm rounded-xl shrink-0 shadow-none">calculate credit</button>
+ </div>
+ <p class="mt-4 font-bold text-xl text-neutral-800" id="rewardResult"></p>
+ </div>
+
+ <!-- Visual Aesthetic Product Showcase Testimonials -->
+ <div class="max-w-5xl mx-auto mb-20">
+ <h2 class="text-2xl md:text-3xl font-normal hero-headline text-center mb-10 text-neutral-800">shared <span>reflections</span></h2>
+ <div class="grid md:grid-cols-3 gap-6 text-left">
+ <div class="card bg-rhode-cream bg-opacity-30">
+ <p class="italic text-neutral-600 mb-6 text-sm">"The workflow took me less than 10 minutes while winding down at night. Used my gift card credit to secure the full peptide lip kit drop completely covered."</p>
+ <div class="flex items-center gap-3">
+ <div class="h-8 w-8 rounded-full bg-rhode-gray text-white flex items-center justify-center text-xs font-bold">SM</div>
+ <div>
+ <p class="text-xs font-semibold text-neutral-800">Sophia M.</p>
+ <p class="text-[10px] text-rhode-gray uppercase tracking-wider">Verified Claimant</p>
+ </div>
+ </div>
+ </div>
+ <div class="card bg-rhode-cream bg-opacity-30">
+ <p class="italic text-neutral-600 mb-6 text-sm">"Super straightforward tracking rules. I loaded up two gaming titles from step 3 on my lunch break, and my digital gift card hit my personal email the following morning!"</p>
+ <div class="flex items-center gap-3">
+ <div class="h-8 w-8 rounded-full bg-rhode-gray text-white flex items-center justify-center text-xs font-bold">EK</div>
+ <div>
+ <p class="text-xs font-semibold text-neutral-800">Emma K.</p>
+ <p class="text-[10px] text-rhode-gray uppercase tracking-wider">Verified Claimant</p>
+ </div>
+ </div>
+ </div>
+ <div class="card bg-rhode-cream bg-opacity-30">
+ <p class="italic text-neutral-600 mb-6 text-sm">"Honestly was a bit analytical first, but it genuinely structuralized perfectly. Got my glaze mist and standard peptide lip fluid treatment for zero out-of-pocket balance."</p>
+ <div class="flex items-center gap-3">
+ <div class="h-8 w-8 rounded-full bg-rhode-gray text-white flex items-center justify-center text-xs font-bold">HL</div>
+ <div>
+ <p class="text-xs font-semibold text-neutral-800">Hailey L.</p>
+ <p class="text-[10px] text-rhode-gray uppercase tracking-wider">Verified Claimant</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- FAQ Accordion Matrix Block -->
+ <div class="max-w-4xl mx-auto text-left py-10 border-t border-rhode-soft">
+ <h2 class="text-3xl font-normal text-center mb-10 hero-headline">frequently asked <span>questions</span></h2>
+
+ <div class="grid md:grid-cols-2 gap-4">
+ <div class="card faq-item cursor-pointer p-5 bg-white">
+ <div class="flex justify-between items-center">
+ <p class="font-medium text-sm text-neutral-800 lowercase">is my information secure?</p>
+ <span class="text-rhode-gray text-xs font-bold">+</span>
+ </div>
+ <p class="faq-content hidden mt-3 text-xs text-neutral-500 leading-relaxed">All active application lines leverage modern TLS data transmission criteria. Processing profiles are deleted post-payout.</p>
+ </div>
+
+ <div class="card faq-item cursor-pointer p-5 bg-white">
+ <div class="flex justify-between items-center">
+ <p class="font-medium text-sm text-neutral-800 lowercase">how do i claim my reward?</p>
+ <span class="text-rhode-gray text-xs font-bold">+</span>
+ </div>
+ <p class="faq-content hidden mt-3 text-xs text-neutral-500 leading-relaxed">Complete the baseline sequence steps explicitly mapped above and fulfill the secondary sponsor verification channels.</p>
+ </div>
+
+ <div class="card faq-item cursor-pointer p-5 bg-white">
+ <div class="flex justify-between items-center">
+ <p class="font-medium text-sm text-neutral-800 lowercase">can i apply from desktop systems?</p>
+ <span class="text-rhode-gray text-xs font-bold">+</span>
+ </div>
+ <p class="faq-content hidden mt-3 text-xs text-neutral-500 leading-relaxed">Direct desktop installations lack necessary mobile telemetry flags; please engage the portal link on an iOS or Android device.</p>
+ </div>
+
+ <div class="card faq-item cursor-pointer p-5 bg-white">
+ <div class="flex justify-between items-center">
+ <p class="font-medium text-sm text-neutral-800 lowercase">do i have to pay anything?</p>
+ <span class="text-rhode-gray text-xs font-bold">+</span>
+ </div>
+ <p class="faq-content hidden mt-3 text-xs text-neutral-500 leading-relaxed">No application structural layer charges fees. Safe, open access setup parameters exclusively apply.</p>
+ </div>
+
+ <div class="card faq-item cursor-pointer p-5 bg-white md:col-span-2">
+ <div class="flex justify-between items-center">
+ <p class="font-medium text-sm text-neutral-800 lowercase">when will i receive the gift card allocation?</p>
+ <span class="text-rhode-gray text-xs font-bold">+</span>
+ </div>
+ <p class="faq-content hidden mt-3 text-xs text-neutral-500 leading-relaxed">System processing engines routinely validate your actions dynamically, queue your reward tier asset, and dispatch details directly via email within a 24-hour cycle window.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<script>
+// Interactive Functional FAQ Module Logic
+document.querySelectorAll('.faq-item').forEach(item => {
+ item.addEventListener('click', () => {
+ const targetText = item.querySelector('.faq-content');
+ const targetIndicator = item.querySelector('span');
+ const isHidden = targetText.classList.contains('hidden');
+ 
+ targetText.classList.toggle('hidden');
+ targetIndicator.textContent = isHidden ? '−' : '+';
+ });
+});
+
+// Algorithmic Reward Calculator Function
+function calculateReward() {
+ const steps = parseInt(document.getElementById('stepsInput').value);
+ const outputElement = document.getElementById('rewardResult');
+ 
+ if (isNaN(steps) || steps < 4) {
+ outputElement.textContent = "Minimum access tier demands 4 completed deals.";
+ outputElement.className = "mt-4 font-medium text-xs text-stone-500 tracking-wide uppercase";
+ return;
+ }
+ 
+ const calculatedValue = Math.round((steps / 4) * 150);
+ outputElement.textContent = `estimated rhode credit value: $${calculatedValue}.00 USD`;
+ outputElement.className = "mt-4 font-bold text-lg text-neutral-800 lowercase tracking-tight";
+}
+
+// Live Dynamic Tracker Simulation Engine
+const initialNames = ["chloe.g***", "brenna_l***", "madison****", "alivia.s***", "katelyn***", "jess_m***"];
+const container = document.getElementById('leaderboardContainer');
+
+function initLeaderboard() {
+ container.innerHTML = '';
+ for(let i = 0; i < 4; i++) {
+ createNewTrackRow(true);
+ }
+}
+
+function createNewTrackRow(isInitial = false) {
+ const selectedName = initialNames[Math.floor(Math.random() * initialNames.length)];
+ const randomizedValue = [50, 100, 150, 250, 400][Math.floor(Math.random() * 5)];
+ 
+ const targetRow = document.createElement('div');
+ targetRow.className = "flex items-center justify-between text-xs py-2 border-b border-neutral-100 last:border-0 transition-opacity duration-700 opacity-0";
+ targetRow.innerHTML = `
+ <span class="text-neutral-700 font-medium">${selectedName} successfully verified</span>
+ <span class="text-rhode-gray font-semibold font-mono">$${randomizedValue} gift card claim</span>
+ `;
+ 
+ if (isInitial) {
+ container.appendChild(targetRow);
+ targetRow.classList.remove('opacity-0');
+ } else {
+ container.insertBefore(targetRow, container.firstChild);
+ setTimeout(() => targetRow.classList.remove('opacity-0'), 50);
+ if(container.children.length > 4) {
+ container.lastChild.remove();
+ }
+ }
+}
+
+initLeaderboard();
+setInterval(() => createNewTrackRow(false), 6000);
+
+// Organic Liquid Aesthetic Canvas Simulation
+const bubblesContainer = document.getElementById('bubbles');
+function createBubble(topPosition = -50) {
+ const bubble = document.createElement('div');
+ bubble.className = 'bubble';
+ const assignedScale = Math.random() * 24 + 16;
+ bubble.style.width = assignedScale + 'px';
+ bubble.style.height = assignedScale + 'px';
+ bubble.style.left = Math.random() * 100 + 'vw';
+ bubble.style.top = topPosition + 'px';
+ bubble.style.animationDuration = (45 + Math.random() * 25) + 's';
+ bubblesContainer.appendChild(bubble);
+ 
+ bubble.addEventListener('animationend', () => bubble.remove());
+}
+for(let i = 0; i < 20; i++) { createBubble(Math.random() * window.innerHeight); }
+setInterval(() => createBubble(), 2500);
+</script>
+
+</body>
+</html>
