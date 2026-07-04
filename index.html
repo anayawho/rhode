@@ -10,123 +10,99 @@
 body {
  margin: 0;
  font-family: 'Roboto', sans-serif;
- /* Background updated with Sephora's iconic high-contrast black & white stripes vibe */
- background: #000000;
- background-image: 
- linear-gradient(90deg, #111111 50%, #000000 50%);
- background-size: 60px 100%;
+ background: linear-gradient(to bottom, #FFFFFF, #FAFAFA);
  overflow-x: hidden;
- color: #ffffff;
+ color: #000000;
  position: relative;
-}
-
-/* Sephora Red Accent Line under the top banner */
-body::before {
- content: "";
- position: absolute;
- top: 0; left: 0; width: 100%; height: 5px;
- background-color: #FF0000;
- z-index: 10000;
 }
 
 /* Urgency Banner */
 .urgency-pulse {
  animation: pulseUrgency 1.5s infinite;
  font-size: 1.2rem;
- /* Banner text updated to Sephora Red and White theme */
- background: #FF0000;
- color: #ffffff;
+ background: #000000;
+ color: #FFFFFF;
  padding: 0.5rem 0;
  text-align: center;
  font-weight: bold;
+ text-transform: uppercase;
  letter-spacing: 1px;
 }
-@keyframes pulseUrgency {0%,100%{opacity:1;}50%{opacity:0.8;}}
+@keyframes pulseUrgency {0%,100%{opacity:1;}50%{opacity:0.85;}}
 
 /* Hero Font */
 .hero-headline { 
  font-family:'Pacifico',cursive; 
  font-weight:400; 
- color:#ffffff; 
+ color:#000000; 
  margin-top:-0.5rem; 
- text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Step Boxes */
 .step-box {
- /* Deep Sephora Black with bright white borders */
- background: linear-gradient(135deg, #111111, #000000);
- color:#ffffff;
- border: 2px solid #ffffff;
- border-radius: 2rem;
+ background: #FFFFFF;
+ color:#000000;
+ border: 2px solid #000000;
+ border-radius: 0px; /* Modern Sephora sharp aesthetic */
  padding: 1.8rem 1.5rem;
- box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+ box-shadow: 5px 5px 0px rgba(0,0,0,1);
  text-align: center;
  transition: transform 0.3s ease, box-shadow 0.3s ease;
  position: relative;
  overflow: hidden;
 }
 .step-box:hover {
- transform: translateY(-7px) scale(1.03);
- box-shadow: 0 18px 30px rgba(255, 0, 0, 0.3);
- border-color: #FF0000;
-}
-.step-box::after {
- content:"";
- position:absolute;
- top:-15px; right:-15px;
- width:35px; height:35px;
- background: rgba(255, 255, 255, 0.1);
- border-radius:50%;
+ transform: translateY(-4px);
+ box-shadow: 8px 8px 0px rgba(0,0,0,1);
 }
 .step-box p { font-size: 0.95rem; }
 
-/* Instruction Text - Glowing Sephora Lipstick Red */
+/* Instruction Text - Beautiful Design */
 .instructions-text {
  font-size: 1.25rem;
  font-weight: 800;
  margin-bottom: 1.5rem;
  display: inline-block;
  padding: 0.7rem 1.8rem;
- border-radius: 3rem;
- background: linear-gradient(135deg, #FF0000, #B30000);
+ border-radius: 0px;
+ background: #000000;
  color: #fff;
- text-shadow: 0 0 8px rgba(255,255,255,0.7), 0 2px 6px rgba(0,0,0,0.15);
- box-shadow: 0 4px 18px rgba(255, 0, 0, 0.6);
+ box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
  letter-spacing: 0.8px;
  animation: glowText 2.5s ease-in-out infinite alternate;
 }
 @keyframes glowText {
- 0% { box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5), 0 0 4px rgba(255,255,255,0.4); }
- 100% { box-shadow: 0 6px 20px rgba(255, 0, 0, 0.9), 0 0 12px rgba(255,255,255,0.6); }
+ 0% { opacity: 0.95; }
+ 100% { opacity: 1; }
 }
 
-/* Click Button - Matte Black with Red Borders & Neon Glow */
+/* Click Button - More Eye-catching */
 .click-button {
- background: linear-gradient(135deg, #000000, #1c1c1c);
- color:#ffffff;
+ background: #000000;
+ color:#fff;
  font-weight:bold;
- border: 2px solid #FF0000;
- text-shadow: 0 0 4px rgba(0,0,0,0.5);
- box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4), 0 0 25px rgba(255, 0, 0, 0.2);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
  font-size:1.6rem;
  padding:1rem 3.5rem;
- border-radius:2rem;
+ border-radius:0px;
  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+ border: 2px solid #000000;
 }
 .click-button:hover { 
- transform: scale(1.07); 
- box-shadow: 0 6px 25px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.5);
- filter: brightness(1.2);
+ transform: scale(1.05); 
+ background: #FFFFFF;
+ color: #000000;
+ box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Content Cards */
-.card { border-radius:1.5rem; padding:2rem; box-shadow:0 10px 30px rgba(0,0,0,0.6); transition: transform 0.3s; }
-.card:hover { transform: translateY(-5px); }
+/* Cards */
+.card { border-radius:0px; border: 1px solid #E5E5E5; padding:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.card:hover { transform: translateY(-3px); border-color: #000000; }
 .card-stats, .card-leaderboard, .card-testimonial, .card-faq, .card-estimator {
- background: linear-gradient(135deg, #111111, #070707);
- color:#ffffff;
- border: 1px solid rgba(255, 255, 255, 0.1);
+ background: #FFFFFF;
+ color:#000000;
 }
 
 /* Popups */
@@ -134,38 +110,32 @@ body::before {
 position: fixed;
 bottom:20px;
 right:-350px;
-background-color:#000000;
-color:#ffffff;
+background-color:#ffffff;
+color:#000000;
 padding:12px 18px;
-border-radius:12px;
+border-radius:0px;
+border: 2px solid #000000;
 font-weight:bold;
-box-shadow:0 4px 12px rgba(255, 0, 0, 0.3);
-border: 1px solid #FF0000;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
 transition:right 0.6s ease,opacity 0.6s ease;
 z-index:9999;
 opacity:0;
 }
 
-/* Bubbles - Tinted with Sephora Red */
+/* Bubbles styled as chic monochrome dots/particles */
 #bubbles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .bubble {
  position:absolute;
  border-radius:50%;
- background: radial-gradient(circle at 30% 30%, #FF3333, #FF0000);
- opacity:0.25;
+ background: #000000;
+ opacity:0.05;
  animation: floatBubble linear infinite;
  pointer-events:none;
 }
 @keyframes floatBubble {
- 0% { transform: translateY(0px) scale(0.5); opacity:0.2; }
- 50% { opacity:0.3; }
- 100% { transform: translateY(110vh) scale(1); opacity:0.25; }
-}
-
-/* Input Fields text color override for dynamic readability */
-#stepsInput {
- color: #000000 !important;
- background-color: #ffffff !important;
+ 0% { transform: translateY(0px) scale(0.5); opacity:0.03; }
+ 50% { opacity:0.07; }
+ 100% { transform: translateY(110vh) scale(1); opacity:0.05; }
 }
 </style>
 </head>
@@ -173,7 +143,6 @@ opacity:0;
 
 <div id="bubbles"></div>
 
-<!-- Limited time banner updated with Sephora Birthday Gifts July 2026 -->
 <div class="urgency-pulse">Sephora Birthday Gifts July 2026</div>
 
 <section class="relative py-16 px-4 text-center">
@@ -195,14 +164,14 @@ opacity:0;
 <!-- Reward Estimator -->
 <div class="mt-10 card card-estimator max-w-2xl mx-auto p-8">
 <label class="block font-bold mb-2 text-lg">Deals to complete (4-70):</label>
-<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-lg mb-4 text-black" placeholder="You must complete 4+ deals to claim it">
-<button onclick="calculateReward()" class="click-button px-6 py-3 rounded-2xl">Calculate Reward</button>
+<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-none border border-black mb-4 text-black" placeholder="You must complete 4+ deals to claim it">
+<button onclick="calculateReward()" class="click-button px-6 py-3">Calculate Reward</button>
 <p class="mt-4 font-bold text-xl" id="rewardResult"></p>
 </div>
 
 <!-- FAQ -->
 <section class="py-10 px-4 text-center">
-<h2 class="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+<h2 class="text-4xl font-bold mb-6 uppercase tracking-wider text-sm md:text-2xl">Frequently Asked Questions</h2>
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
 <div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Is my information secure?</p><p class="faq-content hidden">All information is encrypted and stored securely. We never share your data.</p></div>
 <div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">How do I claim my reward?</p><p class="faq-content hidden">Complete 3 simple steps: answer surveys, enter email & basic info, do recommended deals (such as installing games and apps)</p></div>
@@ -214,31 +183,31 @@ opacity:0;
 
 <!-- Stats & Milestones -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12">Stats & Milestones</h2>
+<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl">Stats & Milestones</h2>
 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<div class="card card-stats"><div class="text-6xl font-bold" style="color: #FF0000; text-shadow: 0 0 10px rgba(255,0,0,0.4);">12,540+</div><p class="mt-3 font-semibold">Claims Completed</p></div>
-<div class="card card-stats"><div class="text-5xl font-bold" style="color: #FF0000; text-shadow: 0 0 10px rgba(255,0,0,0.4);">7,860+</div><p class="mt-3 font-semibold">Active Participants</p></div>
-<div class="card card-stats"><div class="text-5xl font-bold" style="color: #FF0000; text-shadow: 0 0 10px rgba(255,0,0,0.4);">4,320+</div><p class="mt-3 font-semibold">Deals Completed</p></div>
+<div class="card card-stats"><div class="text-6xl font-bold">12,540+</div><p class="mt-3 font-semibold">Claims Completed</p></div>
+<div class="card card-stats"><div class="text-5xl font-bold">7,860+</div><p class="mt-3 font-semibold">Active Participants</p></div>
+<div class="card card-stats"><div class="text-5xl font-bold">4,320+</div><p class="mt-3 font-semibold">Deals Completed</p></div>
 </div>
 </section>
 
 <!-- Leaderboard -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12">Recent Winners</h2>
+<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl">Recent Winners</h2>
 <div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="leaderboard"></div>
 </section>
 
 <!-- Testimonials -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12">Testimonials</h2>
+<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl">Testimonials</h2>
 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Received my gift card within 24 hours. Super smooth!"</p><p class="font-bold mt-4" style="color: #FF0000;">- Sarah W., California</p></div>
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Fast, safe, and verified. Loved it!"</p><p class="font-bold mt-4" style="color: #FF0000;">- Michael B., New York</p></div>
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Everything explained clearly, trusted and verified."</p><p class="font-bold mt-4" style="color: #FF0000;">- Emma R., Texas</p></div>
+<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Received my gift card within 24 hours. Super smooth!"</p><p class="font-bold mt-4">- Sarah W., California</p></div>
+<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Fast, safe, and verified. Loved it!"</p><p class="font-bold mt-4">- Michael B., New York</p></div>
+<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Everything explained clearly, trusted and verified."</p><p class="font-bold mt-4">- Emma R., Texas</p></div>
 </div>
 </section>
 
-<footer class="py-12 px-4 text-center"><p class="mb-4">SSL Secured • Encrypted • Verified • 100% Safe</p><p>© 2025</p></footer>
+<footer class="py-12 px-4 text-center border-t border-gray-200"><p class="mb-4 text-xs tracking-widest uppercase">SSL Secured • Encrypted • Verified • 100% Safe</p><p>© 2025</p></footer>
 
 <script>
 // FAQ toggle
@@ -257,7 +226,7 @@ function updateLeaderboard(){
  const reward=rewards[Math.floor(Math.random()*rewards.length)];
  const div=document.createElement('div');
  div.className="card card-leaderboard flex justify-between items-center p-6";
- div.innerHTML=`<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: #FF0000;">${name.split(',')[0].charAt(0)}${name.split(',')[1].charAt(0)}</div><p class="font-semibold">${name} claimed <span style="color: #FF0000; font-weight: bold;">${reward}</span></p></div>`;
+ div.innerHTML=`<div class="flex items-center gap-4"><div class="w-12 h-12 bg-black rounded-none flex items-center justify-center font-bold text-white uppercase text-xs">${name.split(',')[0].charAt(0)}${name.split(',')[1].trim().charAt(0)}</div><p class="font-semibold">${name} claimed ${reward}</p></div>`;
  leaderboardEl.appendChild(div);
  }
 }
@@ -268,7 +237,7 @@ function calculateReward(){
  const steps=parseInt(document.getElementById('stepsInput').value);
  if(steps < 4){document.getElementById('rewardResult').textContent="You must complete 4+ deals to claim it"; return;}
  const reward=Math.round((steps/4)*150);
- document.getElementById('rewardResult').innerHTML=`Estimated Reward: <span style="color: #FF0000; font-weight: bold;">$${reward}</span>`;
+ document.getElementById('rewardResult').textContent=`Estimated Reward: $${reward}`;
 }
 
 // Bubbles
@@ -276,7 +245,7 @@ const bubblesContainer = document.getElementById('bubbles');
 function createBubble(topPosition = -50) {
  const bubble = document.createElement('div');
  bubble.className = 'bubble';
- const size = Math.random() * 30 + 20;
+ const size = Math.random() * 8 + 4; // Smaller chic particles instead of large pink bubbles
  bubble.style.width = size + 'px';
  bubble.style.height = size + 'px';
  bubble.style.left = Math.random() * 100 + 'vw';
