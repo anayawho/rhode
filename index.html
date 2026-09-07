@@ -16,29 +16,29 @@ body {
  position:relative;
 }
 
-/* Urgency Banner - Walmart Yellow */
+/* Urgency Banner */
 .urgency-pulse {
  animation: pulseUrgency 1.5s infinite;
  font-size: 1.2rem;
- background: #FFC220;
- color: #000000;
+ background: #0071CE;
+ color: #FFFFFF;
  padding: 0.5rem 0;
  text-align: center;
  font-weight: bold;
 }
 @keyframes pulseUrgency {0%,100%{opacity:1;}50%{opacity:0.85;}}
 
-/* Hero Font - Walmart Dark Blue */
+/* Hero Font */
 .hero-headline { 
  font-family:'Roboto', sans-serif; 
  font-weight:900; 
- color:#002D62; 
+ color:#0071CE; 
  margin-top:-0.5rem; 
 }
 
-/* Step Boxes - Walmart Elegant Styling */
+/* Step Boxes */
 .step-box {
- background: linear-gradient(135deg, #FFFFFF, #EBF3FA);
+ background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
  color:#1D252C;
  border-radius: 2rem;
  padding: 1.8rem 1.5rem;
@@ -63,7 +63,7 @@ body {
 }
 .step-box p { font-size: 0.95rem; }
 
-/* Instruction Text - Walmart Classic Blue */
+/* Instruction Text */
 .instructions-text {
  font-size: 1.25rem;
  font-weight: 800;
@@ -71,7 +71,7 @@ body {
  display: inline-block;
  padding: 0.7rem 1.8rem;
  border-radius: 3rem;
- background: linear-gradient(135deg, #0071CE, #004F9E);
+ background: linear-gradient(135deg, #0071CE, #004C8C);
  color: #FFFFFF;
  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
  box-shadow: 0 4px 18px rgba(0, 113, 206, 0.3);
@@ -83,22 +83,22 @@ body {
  100% { box-shadow: 0 6px 20px rgba(0, 113, 206, 0.45); }
 }
 
-/* Click Button - Walmart Blue Gradient */
+/* Click Button */
 .click-button {
- background: linear-gradient(135deg, #0071CE, #0056A3);
- color:#FFFFFF;
+ background: linear-gradient(135deg, #FFC220, #E0A800);
+ color:#0071CE;
  font-weight:900;
  text-shadow: none;
- box-shadow:0 4px 20px rgba(0, 113, 206, 0.25);
+ box-shadow:0 4px 20px rgba(255, 194, 32, 0.4);
  font-size:1.6rem;
  padding:1rem 3.5rem;
  border-radius:2rem;
- border: 2px solid #0071CE;
+ border: 2px solid #FFC220;
  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 .click-button:hover { 
  transform: scale(1.07); 
- box-shadow:0 6px 25px rgba(0, 113, 206, 0.4);
+ box-shadow:0 6px 25px rgba(255, 194, 32, 0.6);
  filter: brightness(1.05);
 }
 
@@ -106,17 +106,17 @@ body {
 .card { border-radius:1.5rem; padding:2rem; box-shadow:0 10px 20px rgba(0, 113, 206, 0.08); transition: transform 0.3s; }
 .card:hover { transform: translateY(-5px); }
 .card-stats, .card-leaderboard, .card-testimonial, .card-faq, .card-estimator {
- background: linear-gradient(135deg, #FFFFFF, #EBF3FA);
+ background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
  color:#1D252C;
  border: 1px solid rgba(0, 113, 206, 0.1);
 }
 
-/* Bubbles - Blue to Match Theme */
+/* Bubbles */
 #bubbles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .bubble {
  position:absolute;
  border-radius:50%;
- background: radial-gradient(circle at 30% 30%, #90C8F6, #0071CE);
+ background: radial-gradient(circle at 30% 30%, #B3D7FF, #0071CE);
  opacity:0.25;
  animation: floatBubble linear infinite;
  pointer-events:none;
@@ -183,7 +183,7 @@ body {
 <div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="comments"></div>
 </section>
 
-<footer class="py-12 px-4 text-center"><p class="mb-4">Secure • Encrypted • Verified • 100% Safe</p><p>© 2026. All rights reserved.</p></footer>
+<footer class="py-12 px-4 text-center"><p class="mb-4">Secure • Encrypted • Verified • 100% Safe</p><p>© 2026 Walmart. All rights reserved.</p></footer>
 
 <script>
 // FAQ toggle
@@ -221,7 +221,7 @@ const commentsArr=[
 "omg I just got my Walmart gift card!",
 "this was so easy and fun",
 "love it!",
-"finally bought my new groceries at Walmart!",
+"finally got my groceries at Walmart!",
 "can't believe how fast it worked",
 "Walmart made my week",
 "best deal ever",
