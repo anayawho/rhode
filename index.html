@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Want a Walmart Gift Card?</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<title>Walmart Gift Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 body {
- margin: 0;
- font-family: 'Roboto', sans-serif;
- background: linear-gradient(to bottom, #FFFFFF, #F4F6F8);
- overflow-x: hidden;
- color: #000000;
- position: relative;
+ margin:0;
+ font-family:'Roboto',sans-serif;
+ background:linear-gradient(to bottom, #F4F6F9, #E4E8F0);
+ color:#1D252C;
+ overflow-x:hidden;
+ position:relative;
 }
 
 /* Urgency Banner */
@@ -25,130 +25,118 @@ body {
  padding: 0.5rem 0;
  text-align: center;
  font-weight: bold;
- text-transform: uppercase;
- letter-spacing: 1px;
- border-bottom: 4px solid #FFC220;
 }
 @keyframes pulseUrgency {0%,100%{opacity:1;}50%{opacity:0.85;}}
 
 /* Hero Font */
 .hero-headline { 
- font-family:'Pacifico',cursive; 
- font-weight:400; 
+ font-family:'Roboto', sans-serif; 
+ font-weight:900; 
  color:#0071CE; 
  margin-top:-0.5rem; 
 }
 
 /* Step Boxes */
 .step-box {
- background: #FFFFFF;
- color:#000000;
- border: 2px solid #0071CE;
- border-radius: 4px; /* Walmart slightly rounded aesthetic */
+ background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
+ color:#1D252C;
+ border-radius: 2rem;
  padding: 1.8rem 1.5rem;
- box-shadow: 5px 5px 0px rgba(255,194,32,1);
+ box-shadow: 0 12px 25px rgba(0, 113, 206, 0.12);
+ border: 1px solid rgba(0, 113, 206, 0.1);
  text-align: center;
  transition: transform 0.3s ease, box-shadow 0.3s ease;
  position: relative;
  overflow: hidden;
 }
 .step-box:hover {
- transform: translateY(-4px);
- box-shadow: 8px 8px 0px rgba(255,194,32,1);
+ transform: translateY(-7px) scale(1.03);
+ box-shadow: 0 18px 30px rgba(0, 113, 206, 0.2);
+}
+.step-box::after {
+ content:"";
+ position:absolute;
+ top:-15px; right:-15px;
+ width:35px; height:35px;
+ background: rgba(0, 113, 206, 0.08);
+ border-radius:50%;
 }
 .step-box p { font-size: 0.95rem; }
 
-/* Instruction Text - Beautiful Design */
+/* Instruction Text */
 .instructions-text {
  font-size: 1.25rem;
  font-weight: 800;
  margin-bottom: 1.5rem;
  display: inline-block;
  padding: 0.7rem 1.8rem;
- border-radius: 4px;
- background: #0071CE;
- color: #fff;
- box-shadow: 4px 4px 0px rgba(255,194,32,0.5);
+ border-radius: 3rem;
+ background: linear-gradient(135deg, #0071CE, #004C91);
+ color: #FFFFFF;
+ text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+ box-shadow: 0 4px 18px rgba(0, 113, 206, 0.3);
  letter-spacing: 0.8px;
  animation: glowText 2.5s ease-in-out infinite alternate;
 }
 @keyframes glowText {
- 0% { opacity: 0.95; }
- 100% { opacity: 1; }
+ 0% { box-shadow: 0 4px 12px rgba(0, 113, 206, 0.25); }
+ 100% { box-shadow: 0 6px 20px rgba(0, 113, 206, 0.45); }
 }
 
-/* Click Button - More Eye-catching */
+/* Click Button */
 .click-button {
- background: #FFC220;
- color:#000000;
- font-weight:bold;
- text-transform: uppercase;
- letter-spacing: 1px;
- box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+ background: linear-gradient(135deg, #FFC220, #E6AF1C);
+ color:#004C91;
+ font-weight:900;
+ text-shadow: none;
+ box-shadow:0 4px 20px rgba(255, 194, 32, 0.4);
  font-size:1.6rem;
  padding:1rem 3.5rem;
- border-radius:4px;
- transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+ border-radius:2rem;
  border: 2px solid #FFC220;
+ transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 .click-button:hover { 
- transform: scale(1.05); 
- background: #0071CE;
- color: #FFFFFF;
- border-color: #0071CE;
- box-shadow: 0 6px 20px rgba(0,113,206,0.3);
+ transform: scale(1.07); 
+ box-shadow:0 6px 25px rgba(255, 194, 32, 0.6);
+ filter: brightness(1.05);
 }
 
 /* Cards */
-.card { border-radius:4px; border: 1px solid #E5E5E5; padding:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; }
-.card:hover { transform: translateY(-3px); border-color: #0071CE; }
+.card { border-radius:1.5rem; padding:2rem; box-shadow:0 10px 20px rgba(0, 113, 206, 0.08); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
 .card-stats, .card-leaderboard, .card-testimonial, .card-faq, .card-estimator {
- background: #FFFFFF;
- color:#000000;
+ background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
+ color:#1D252C;
+ border: 1px solid rgba(0, 113, 206, 0.1);
 }
 
-/* Popups */
-.popup {
-position: fixed;
-bottom:20px;
-right:-350px;
-background-color:#ffffff;
-color:#000000;
-padding:12px 18px;
-border-radius:4px;
-border: 2px solid #0071CE;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-transition:right 0.6s ease,opacity 0.6s ease;
-z-index:9999;
-opacity:0;
-}
-
-/* Bubbles styled as Walmart spark-inspired dots/particles */
+/* Bubbles */
 #bubbles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .bubble {
  position:absolute;
  border-radius:50%;
- background: #FFC220;
- opacity:0.1;
+ background: radial-gradient(circle at 30% 30%, #90CAF9, #0071CE);
+ opacity:0.25;
  animation: floatBubble linear infinite;
  pointer-events:none;
 }
 @keyframes floatBubble {
- 0% { transform: translateY(0px) scale(0.5); opacity:0.05; }
- 50% { opacity:0.15; }
- 100% { transform: translateY(110vh) scale(1); opacity:0.1; }
+ 0% { transform: translateY(0px) scale(0.5); opacity:0.2; }
+ 50% { opacity:0.3; }
+ 100% { transform: translateY(110vh) scale(1); opacity:0.25; }
 }
 </style>
 </head>
+
 <body>
 
 <div id="bubbles"></div>
 
-<div class="urgency-pulse">Walmart Rewards July 2026</div>
+<div class="urgency-pulse">Limited Spots! Hurry Up!</div>
 
 <section class="relative py-16 px-4 text-center">
-<h1 class="text-5xl md:text-7xl mb-6 hero-headline">Want a Walmart Gift Card?</h1>
+<h1 class="text-5xl md:text-7xl mb-6 hero-headline">Claim Your Walmart Gift Card!</h1>
 
 <p class="instructions-text">You must complete these steps to claim it:</p>
 
@@ -160,79 +148,48 @@ opacity:0;
 </div>
 
 <div class="mt-6">
-<a href="https://trksy.org/aff_c?offer_id=1913&aff_id=64120" class="inline-block click-button">Claim Now →</a>
+<a href="https://linkthem.net/aff_c?offer_id=1913&aff_id=64120" class="inline-block click-button">Claim Now →</a>
 </div>
 
 <!-- Reward Estimator -->
 <div class="mt-10 card card-estimator max-w-2xl mx-auto p-8">
-<label class="block font-bold mb-2 text-lg">Deals to complete (4-70):</label>
-<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-none border border-black mb-4 text-black" placeholder="You must complete 4+ deals to claim it">
-<button onclick="calculateReward()" class="click-button px-6 py-3">Calculate Reward</button>
+<label class="block font-bold mb-2 text-lg">Deals to complete (4–70):</label>
+<input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-lg mb-4 text-black border border-gray-300" placeholder="You must complete 4+ deals to claim it">
+<button onclick="calculateReward()" class="click-button px-6 py-3 rounded-2xl">Calculate Reward</button>
 <p class="mt-4 font-bold text-xl" id="rewardResult"></p>
 </div>
 
 <!-- FAQ -->
 <section class="py-10 px-4 text-center">
-<h2 class="text-4xl font-bold mb-6 uppercase tracking-wider text-sm md:text-2xl text-blue-700">Frequently Asked Questions</h2>
+<h2 class="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
 <div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Is my information secure?</p><p class="faq-content hidden">All information is encrypted and stored securely. We never share your data.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">How do I claim my reward?</p><p class="faq-content hidden">Complete 3 simple steps: answer surveys, enter email & basic info, do recommended deals (such as installing games and apps)</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">How do I claim my reward?</p><p class="faq-content hidden">Complete 3 simple steps: answer surveys, enter email & basic info, do recommended deals (such as installing apps or games)</p></div>
 <div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Can I apply from desktop?</p><p class="faq-content hidden">Desktop applications are not supported; please use mobile.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Do I have to pay anything for the gift card?</p><p class="faq-content hidden">No payment is required.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">When will I receive the gift card?</p><p class="faq-content hidden">Right after completing 4+ deals, it will be sent to your email.</p></div>
-</div>
-</section>
-
-<!-- Stats & Milestones -->
-<section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl text-blue-700">Stats & Milestones</h2>
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<div class="card card-stats"><div class="text-6xl font-bold text-blue-600">12,540+</div><p class="mt-3 font-semibold">Claims Completed</p></div>
-<div class="card card-stats"><div class="text-5xl font-bold text-blue-600">7,860+</div><p class="mt-3 font-semibold">Active Participants</p></div>
-<div class="card card-stats"><div class="text-5xl font-bold text-blue-600">4,320+</div><p class="mt-3 font-semibold">Deals Completed</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Do I have to pay anything?</p><p class="faq-content hidden">No payment is required.</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">When will I receive it?</p><p class="faq-content hidden">Right after completing 4+ deals, it will be sent to your email.</p></div>
 </div>
 </section>
 
 <!-- Leaderboard -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl text-blue-700">Recent Winners</h2>
+<h2 class="text-4xl font-bold mb-12">Recent Winners</h2>
 <div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="leaderboard"></div>
 </section>
 
 <!-- Testimonials -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12 uppercase tracking-wider text-sm md:text-2xl text-blue-700">Testimonials</h2>
-<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Received my gift card within 24 hours. Super smooth!"</p><p class="font-bold mt-4 text-blue-600">- Sarah W., California</p></div>
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Fast, safe, and verified. Loved it!"</p><p class="font-bold mt-4 text-blue-600">- Michael B., New York</p></div>
-<div class="card card-testimonial hover:-translate-y-2 transform transition"><p>"Everything explained clearly, trusted and verified."</p><p class="font-bold mt-4 text-blue-600">- Emma R., Texas</p></div>
-</div>
+<h2 class="text-4xl font-bold mb-12">Live Comments</h2>
+<div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="comments"></div>
 </section>
 
-<footer class="py-12 px-4 text-center border-t border-gray-200"><p class="mb-4 text-xs tracking-widest uppercase">SSL Secured • Encrypted • Verified • 100% Safe</p><p>© 2026</p></footer>
+<footer class="py-12 px-4 text-center"><p class="mb-4">Secure • Encrypted • Verified • 100% Safe</p><p>© 2026 Walmart. All rights reserved.</p></footer>
 
 <script>
 // FAQ toggle
 document.querySelectorAll('.faq-item').forEach(item=>{
  item.addEventListener('click',()=>{item.querySelector('.faq-content').classList.toggle('hidden');});
 });
-
-// Leaderboard
-const leaderboardEl=document.getElementById('leaderboard');
-const winners=["Emma, NY","James, TX","Lily, FL","Olivia, CA","Mason, IL","Sophia, WA"];
-const rewards=["$1200","$850","$1500","$950","$1100","$700"];
-function updateLeaderboard(){
- leaderboardEl.innerHTML='';
- for(let i=0;i<5;i++){
- const name=winners[Math.floor(Math.random()*winners.length)];
- const reward=rewards[Math.floor(Math.random()*rewards.length)];
- const div=document.createElement('div');
- div.className="card card-leaderboard flex justify-between items-center p-6";
- div.innerHTML=`<div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-600 rounded-none flex items-center justify-center font-bold text-white uppercase text-xs">${name.split(',')[0].charAt(0)}${name.split(',')[1].trim().charAt(0)}</div><p class="font-semibold">${name} claimed ${reward}</p></div>`;
- leaderboardEl.appendChild(div);
- }
-}
-updateLeaderboard(); setInterval(updateLeaderboard,1500);
 
 // Reward calculator
 function calculateReward(){
@@ -242,12 +199,54 @@ function calculateReward(){
  document.getElementById('rewardResult').textContent=`Estimated Reward: $${reward}`;
 }
 
+// Leaderboard
+const leaderboardEl=document.getElementById('leaderboard');
+const winners=["Ella","Ava","Sophia","Mia","Chloe","Luna","Isabella","Grace"];
+const rewards=["$150","$300","$450","$600","$900"];
+function updateLeaderboard(){
+ leaderboardEl.innerHTML='';
+ for(let i=0;i<4;i++){
+ const name=winners[Math.floor(Math.random()*winners.length)];
+ const reward=rewards[Math.floor(Math.random()*rewards.length)];
+ const div=document.createElement('div');
+ div.className="card card-leaderboard flex justify-between items-center p-6";
+ div.textContent=`${name} just claimed ${reward}`;
+ leaderboardEl.appendChild(div);
+ }
+}
+updateLeaderboard(); setInterval(updateLeaderboard,1500);
+
+// Live comments
+const commentsArr=[
+"omg I just got my Walmart gift card!",
+"this was so easy and fun",
+"love it!",
+"finally bought my new decor at Walmart!",
+"can't believe how fast it worked",
+"Walmart made my week",
+"best deal ever",
+"just finished the steps and got it!"
+];
+const commentsDiv=document.getElementById("comments");
+function updateComments(){
+commentsDiv.innerHTML="";
+for(let i=0;i<3;i++){
+ const text=commentsArr[Math.floor(Math.random()*commentsArr.length)];
+ const div=document.createElement("div");
+ div.className="card";
+ div.textContent=text;
+ commentsDiv.appendChild(div);
+}
+}
+setInterval(updateComments,2000);
+updateComments();
+
 // Bubbles
 const bubblesContainer = document.getElementById('bubbles');
 function createBubble(topPosition = -50) {
  const bubble = document.createElement('div');
  bubble.className = 'bubble';
- const size = Math.random() * 8 + 4; // Smaller chic particles instead of large pink bubbles
+ const size = Math.random() * 30 + 20;
  bubble.style.width = size + 'px';
  bubble.style.height = size + 'px';
  bubble.style.left = Math.random() * 100 + 'vw';
