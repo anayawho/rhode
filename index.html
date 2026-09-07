@@ -10,44 +10,40 @@
 body {
  margin:0;
  font-family:'Roboto',sans-serif;
- background:linear-gradient(to bottom, #0071CE, #E6F0FA, #F4F6F9);
+ background:linear-gradient(to bottom, #F4F6F9, #E4E8F0);
  color:#1D252C;
  overflow-x:hidden;
  position:relative;
 }
 
-/* Urgency Banner */
+/* Urgency Banner - Walmart Yellow */
 .urgency-pulse {
  animation: pulseUrgency 1.5s infinite;
  font-size: 1.2rem;
  background: #FFC220;
  color: #000000;
- padding: 0.6rem 0;
+ padding: 0.5rem 0;
  text-align: center;
- font-weight: 900;
- text-transform: uppercase;
- letter-spacing: 1px;
- border-bottom: 2px solid #E5AF1D;
+ font-weight: bold;
 }
 @keyframes pulseUrgency {0%,100%{opacity:1;}50%{opacity:0.85;}}
 
-/* Hero Section Styling */
+/* Hero Font - Walmart Dark Blue */
 .hero-headline { 
  font-family:'Roboto', sans-serif; 
  font-weight:900; 
- color:#FFFFFF; 
- text-shadow: 0 2px 4px rgba(0,0,0,0.3);
- margin-top: 0.5rem;
+ color:#002D62; 
+ margin-top:-0.5rem; 
 }
 
-/* Step Boxes */
+/* Step Boxes - Walmart Elegant Styling */
 .step-box {
- background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
+ background: linear-gradient(135deg, #FFFFFF, #EBF3FA);
  color:#1D252C;
  border-radius: 2rem;
  padding: 1.8rem 1.5rem;
- box-shadow: 0 12px 25px rgba(0, 113, 206, 0.15);
- border: 1px solid rgba(0, 113, 206, 0.2);
+ box-shadow: 0 12px 25px rgba(0, 113, 206, 0.12);
+ border: 1px solid rgba(0, 113, 206, 0.1);
  text-align: center;
  transition: transform 0.3s ease, box-shadow 0.3s ease;
  position: relative;
@@ -55,19 +51,19 @@ body {
 }
 .step-box:hover {
  transform: translateY(-7px) scale(1.03);
- box-shadow: 0 18px 30px rgba(0, 113, 206, 0.25);
+ box-shadow: 0 18px 30px rgba(0, 113, 206, 0.2);
 }
 .step-box::after {
  content:"";
  position:absolute;
  top:-15px; right:-15px;
  width:35px; height:35px;
- background: rgba(0, 113, 206, 0.1);
+ background: rgba(0, 113, 206, 0.08);
  border-radius:50%;
 }
 .step-box p { font-size: 0.95rem; }
 
-/* Instruction Text */
+/* Instruction Text - Walmart Classic Blue */
 .instructions-text {
  font-size: 1.25rem;
  font-weight: 800;
@@ -75,34 +71,34 @@ body {
  display: inline-block;
  padding: 0.7rem 1.8rem;
  border-radius: 3rem;
- background: linear-gradient(135deg, #FFC220, #E5AF1D);
- color: #000000;
- text-shadow: none;
- box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+ background: linear-gradient(135deg, #0071CE, #004F9E);
+ color: #FFFFFF;
+ text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+ box-shadow: 0 4px 18px rgba(0, 113, 206, 0.3);
  letter-spacing: 0.8px;
  animation: glowText 2.5s ease-in-out infinite alternate;
 }
 @keyframes glowText {
- 0% { box-shadow: 0 4px 12px rgba(255, 194, 32, 0.4); }
- 100% { box-shadow: 0 6px 20px rgba(255, 194, 32, 0.7); }
+ 0% { box-shadow: 0 4px 12px rgba(0, 113, 206, 0.25); }
+ 100% { box-shadow: 0 6px 20px rgba(0, 113, 206, 0.45); }
 }
 
-/* Click Button */
+/* Click Button - Walmart Blue Gradient */
 .click-button {
- background: linear-gradient(135deg, #FFC220, #F2B400);
- color:#000000;
+ background: linear-gradient(135deg, #0071CE, #0056A3);
+ color:#FFFFFF;
  font-weight:900;
  text-shadow: none;
- box-shadow:0 4px 20px rgba(0, 0, 0, 0.2);
+ box-shadow:0 4px 20px rgba(0, 113, 206, 0.25);
  font-size:1.6rem;
  padding:1rem 3.5rem;
  border-radius:2rem;
- border: 2px solid #FFC220;
+ border: 2px solid #0071CE;
  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 .click-button:hover { 
  transform: scale(1.07); 
- box-shadow:0 6px 25px rgba(0, 0, 0, 0.3);
+ box-shadow:0 6px 25px rgba(0, 113, 206, 0.4);
  filter: brightness(1.05);
 }
 
@@ -110,17 +106,17 @@ body {
 .card { border-radius:1.5rem; padding:2rem; box-shadow:0 10px 20px rgba(0, 113, 206, 0.08); transition: transform 0.3s; }
 .card:hover { transform: translateY(-5px); }
 .card-stats, .card-leaderboard, .card-testimonial, .card-faq, .card-estimator {
- background: linear-gradient(135deg, #FFFFFF, #E6F0FA);
+ background: linear-gradient(135deg, #FFFFFF, #EBF3FA);
  color:#1D252C;
- border: 1px solid rgba(0, 113, 206, 0.15);
+ border: 1px solid rgba(0, 113, 206, 0.1);
 }
 
-/* Bubbles */
+/* Bubbles - Blue to Match Theme */
 #bubbles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .bubble {
  position:absolute;
  border-radius:50%;
- background: radial-gradient(circle at 30% 30%, #FFC220, #0071CE);
+ background: radial-gradient(circle at 30% 30%, #90C8F6, #0071CE);
  opacity:0.25;
  animation: floatBubble linear infinite;
  pointer-events:none;
@@ -146,9 +142,9 @@ body {
 
 <!-- Steps -->
 <div class="grid md:grid-cols-3 gap-6 mb-6 max-w-6xl mx-auto">
-<div class="step-box"><p class="font-bold mb-1 text-blue-700">Step 1</p><p>Click on "Claim Now"</p></div>
-<div class="step-box"><p class="font-bold mb-1 text-blue-700">Step 2</p><p>Enter email & basic info</p></div>
-<div class="step-box"><p class="font-bold mb-1 text-blue-700">Step 3</p><p>Complete 4-5 recommended deals (install apps or games)</p></div>
+<div class="step-box"><p class="font-bold mb-1">Step 1</p><p>Click on "Claim Now"</p></div>
+<div class="step-box"><p class="font-bold mb-1">Step 2</p><p>Enter email & basic info</p></div>
+<div class="step-box"><p class="font-bold mb-1">Step 3</p><p>Complete 4-5 recommended deals (install apps or games)</p></div>
 </div>
 
 <div class="mt-6">
@@ -159,35 +155,35 @@ body {
 <div class="mt-10 card card-estimator max-w-2xl mx-auto p-8">
 <label class="block font-bold mb-2 text-lg">Deals to complete (4–70):</label>
 <input type="number" id="stepsInput" min="4" max="70" class="w-full p-3 rounded-lg mb-4 text-black border border-gray-300" placeholder="You must complete 4+ deals to claim it">
-<button onclick="calculateReward()" class="click-button px-6 py-3 rounded-2xl text-lg">Calculate Reward</button>
+<button onclick="calculateReward()" class="click-button px-6 py-3 rounded-2xl">Calculate Reward</button>
 <p class="mt-4 font-bold text-xl" id="rewardResult"></p>
 </div>
 
 <!-- FAQ -->
 <section class="py-10 px-4 text-center">
-<h2 class="text-4xl font-bold mb-6 text-blue-900">Frequently Asked Questions</h2>
+<h2 class="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2 text-blue-800">Is my information secure?</p><p class="faq-content hidden">All information is encrypted and stored securely. We never share your data.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2 text-blue-800">How do I claim my reward?</p><p class="faq-content hidden">Complete 3 simple steps: answer surveys, enter email & basic info, do recommended deals (such as installing apps or games)</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2 text-blue-800">Can I apply from desktop?</p><p class="faq-content hidden">Desktop applications are not supported; please use mobile.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2 text-blue-800">Do I have to pay anything?</p><p class="faq-content hidden">No payment is required.</p></div>
-<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2 text-blue-800">When will I receive it?</p><p class="faq-content hidden">Right after completing 4+ deals, it will be sent to your email.</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Is my information secure?</p><p class="faq-content hidden">All information is encrypted and stored securely. We never share your data.</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">How do I claim my reward?</p><p class="faq-content hidden">Complete 3 simple steps: answer surveys, enter email & basic info, do recommended deals (such as installing apps or games)</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Can I apply from desktop?</p><p class="faq-content hidden">Desktop applications are not supported; please use mobile.</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">Do I have to pay anything?</p><p class="faq-content hidden">No payment is required.</p></div>
+<div class="card card-faq faq-item cursor-pointer"><p class="font-bold mb-2">When will I receive it?</p><p class="faq-content hidden">Right after completing 4+ deals, it will be sent to your email.</p></div>
 </div>
 </section>
 
 <!-- Leaderboard -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12 text-blue-900">Recent Winners</h2>
+<h2 class="text-4xl font-bold mb-12">Recent Winners</h2>
 <div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="leaderboard"></div>
 </section>
 
 <!-- Testimonials -->
 <section class="py-20 px-4 text-center">
-<h2 class="text-4xl font-bold mb-12 text-blue-900">Live Comments</h2>
+<h2 class="text-4xl font-bold mb-12">Live Comments</h2>
 <div class="grid md:grid-cols-1 gap-4 max-w-4xl mx-auto" id="comments"></div>
 </section>
 
-<footer class="py-12 px-4 text-center"><p class="mb-4">Secure • Encrypted • Verified • 100% Safe</p><p>© 2026 Walmart. All rights reserved.</p></footer>
+<footer class="py-12 px-4 text-center"><p class="mb-4">Secure • Encrypted • Verified • 100% Safe</p><p>© 2026. All rights reserved.</p></footer>
 
 <script>
 // FAQ toggle
@@ -225,13 +221,13 @@ const commentsArr=[
 "omg I just got my Walmart gift card!",
 "this was so easy and fun",
 "love it!",
-"finally bought my groceries at Walmart!",
+"finally bought my new groceries at Walmart!",
 "can't believe how fast it worked",
 "Walmart made my week",
 "best deal ever",
 "just finished the steps and got it!"
 ];
-const commentsDiv=document.center || document.getElementById("comments");
+const commentsDiv=document.getElementById("comments");
 function updateComments(){
 commentsDiv.innerHTML="";
 for(let i=0;i<3;i++){
